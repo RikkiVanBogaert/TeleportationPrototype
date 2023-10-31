@@ -1,60 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
+using Transform = UnityEngine.Transform;
 
 public class Platform : MonoBehaviour
 {
-    private bool isGoingRight = true;
-    [SerializeField] private float speed = 3;
-    public float Speed
+    private Vector2 speed = new Vector2(0,0);
+
+    [SerializeField] private float timeOneRun = 1f;
+    public Vector2 Speed
     {
         get => speed;
     }
     [SerializeField] private Transform start;
     [SerializeField] private Transform end;
 
+    private float timePassed;
+
     void Start()
     {
         start.parent = null;
         end.parent = null;
 
-        if (speed > 0)
+        var dx = start.position.x - end.position.x;
+        var dy = start.position.y - end.position.y;
+
+        speed.x = dx / timeOneRun;
+        speed.y = dy / timeOneRun;
+
+        float lerpValue;
+
+        if (dx != 0)
         {
-            isGoingRight = true;
+            lerpValue = (transform.position.x - start.position.x) / Mathf.Abs(dx);
         }
         else
         {
-            isGoingRight = false;
+            lerpValue = (transform.position.y - start.position.y) / Mathf.Abs(dy);
         }
+
+        timePassed = lerpValue * timeOneRun;
     }
 
     void Update()
     {
         CheckBoundaries();
-    }
 
-    void FixedUpdate()
-    {
-        transform.position = new Vector2(transform.position.x + speed, transform.position.y);
+        transform.position = new Vector2(transform.position.x + speed.x * Time.deltaTime,
+            transform.position.y + speed.y * Time.deltaTime);
     }
 
     private void CheckBoundaries()
     {
-        if (transform.position.x <= start.position.x && !isGoingRight)
-        {
-            Flip();
-        }
+        timePassed += Time.deltaTime;
 
-        if (transform.position.x >= end.position.x && isGoingRight)
+        if (timePassed > timeOneRun)
         {
-            Flip();
+            timePassed = 0;
+            speed *= -1;
         }
-    }
-
-    private void Flip()
-    {
-        speed *= -1;
-        isGoingRight = !isGoingRight;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -62,8 +68,7 @@ public class Platform : MonoBehaviour
         if (other.tag != "PlayerBody") return;
 
         other.GetComponent<Movement>().CurrentPlatform = this;
-
-        //other.transform.position = new Vector2(other.transform.position.x + speed, other.transform.position.y);
+        
     }
 
     void OnTriggerExit2D(Collider2D other)

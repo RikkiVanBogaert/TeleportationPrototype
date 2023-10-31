@@ -43,6 +43,8 @@ public class Movement : MonoBehaviour
             Flip();
         }
 
+        MoveOnPlatform();
+
         //KillY
         if (transform.position.y < -8)
         {
@@ -50,13 +52,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        if (currentPlatform)
-        {
-            transform.position = new Vector2(transform.position.x + currentPlatform.Speed, transform.position.y);
-        }
-    }
 
     public void Jump(InputAction.CallbackContext context)
     {
@@ -84,5 +79,12 @@ public class Movement : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    private void MoveOnPlatform()
+    {
+        if (!currentPlatform) return;
+
+        transform.position = new Vector2(transform.position.x + currentPlatform.Speed.x * Time.deltaTime,
+            transform.position.y + currentPlatform.Speed.y * Time.deltaTime);
+    }
    
 }

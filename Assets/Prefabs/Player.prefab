@@ -538,6 +538,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fc7ca993-deae-4481-95d5-1a0f57ca33e2
     m_ActionName: 'Player/Teleport[/Keyboard/j]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6535066831528356757}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2540362d-f4a2-44ae-9b01-e352154c9850
+    m_ActionName: 'Player/Menu[/Keyboard/m,/DualSenseGamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -562,7 +578,6 @@ MonoBehaviour:
     m_Bits: 64
   speed: 6
   jumpingPower: 10
-  collAgainstWall: {fileID: 0}
 --- !u!114 &2297484988938343169
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,8 +15,6 @@ public class Movement : MonoBehaviour
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
-    [SerializeField] private AgainstWall collAgainstWall;
-
     private Platform currentPlatform;
 
     public Platform CurrentPlatform
@@ -53,19 +51,6 @@ public class Movement : MonoBehaviour
     }
 
 
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-    }
-
-    public void Move(InputAction.CallbackContext context)
-    {
-        horizontal = context.ReadValue<Vector2>().x;
-    }
-
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -86,5 +71,26 @@ public class Movement : MonoBehaviour
         transform.position = new Vector2(transform.position.x + currentPlatform.Speed.x * Time.deltaTime,
             transform.position.y + currentPlatform.Speed.y * Time.deltaTime);
     }
-   
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+    }
+
+    public void Menu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Load main menu");
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
 }

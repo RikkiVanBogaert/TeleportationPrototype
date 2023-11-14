@@ -9,15 +9,13 @@ public class End : MonoBehaviour
     {
         if (other.tag != "PlayerBody") return;
 
-        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        //one less since last scene is main menu
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
-            //Reload same level
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
             //Reload level 0
             SceneManager.LoadScene(0);
         }

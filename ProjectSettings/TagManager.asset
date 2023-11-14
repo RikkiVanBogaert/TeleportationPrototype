@@ -8,6 +8,7 @@ TagManager:
   - TeleportSpot
   - PlayerBody
   - TeleportStone
+  - Ground
   layers:
   - Default
   - TransparentFX

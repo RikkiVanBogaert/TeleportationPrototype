@@ -1,0 +1,6 @@
+PlayerTeleported:(5.1,-2.794885,0):(1,0,0,1)
+PlayerTeleported:(5.1,-2.794885,0):(1,0,0,1)
+PlayerTeleported:(5.1,-2.794885,0):(1,0,0,1)
+PlayerTeleported:(5.1,-2.794885,0):(1,0,0,1)
+PlayerTeleported:(1.259994,-1.962579,0):(1,0,0,1)
+PlayerTeleported:(1.619994,-1.973979,0):(1,0,0,0.5)

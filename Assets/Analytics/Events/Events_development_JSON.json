@@ -1,0 +1,174 @@
+[
+  {
+    "eventTimestamp": "20/11/2023 17:49:37",
+    "userID": "Rikki",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "1c4fb2700598c6cb72805beed16c2719",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:49:39",
+    "userID": "Rikki",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "ca88b8c57ef24cbb8069ee12bf031bee",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:51:37",
+    "userID": "Rik",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "80c2904c10d7d0f0919c6ec2f7fd8d16",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:51:46",
+    "userID": "Rik",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "d4877fa38276ce946b76ac1b1a94dea7",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:51:48",
+    "userID": "Rik",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "b3f9155bda5457be581df5bbb3d87652",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 2
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:51:51",
+    "userID": "Rik",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "46b251f7c401448f0a6c4f64d8c8cd82",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 3
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:52:02",
+    "userID": "Rik",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "2d930a7007c0069fd218377c915ab2ca",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:53:25",
+    "userID": "Ri",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "e1884cb864853f9875dda3894e544e28",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:53:43",
+    "userID": "Ri",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "2d3f45a13dca1b092a1764c885bb0d9b",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:53:50",
+    "userID": "Ri",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "507b77395ec696feb4b3c339236db731",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:47:01",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "a3cc1d3dcb2cc1e22636651ac6210b2d",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1,
+      "deaths": 0,
+      "timePassed": 3.55059981
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:47:04",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "b51f9bcb2275b39810897b9e098241a6",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1,
+      "deaths": 0,
+      "timePassed": 2.41437054
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:47:12",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "b4e54587a39d050719c4b7b9b1019234",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 2,
+      "deaths": 0,
+      "timePassed": 7.767425
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:47:27",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "c8a93ccd1b9c936b59405dce98643a35",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 3,
+      "deaths": 0,
+      "timePassed": 15.1169119
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:47:51",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "a8545033aa0afca413125fd45625c369",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 3,
+      "deaths": 1,
+      "timePassed": 23.470335
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 18:48:08",
+    "userID": "test",
+    "eventName": "LevelFinished",
+    "eventUUID": "ac6531f7ad8067cc855837e77a57ed5b",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 0,
+      "deaths": 2,
+      "timePassed": 17.3702316
+    }
+  }
+]

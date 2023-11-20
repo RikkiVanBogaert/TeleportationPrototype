@@ -112,11 +112,11 @@ Transform:
   m_GameObject: {fileID: 2859566238365868467}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3399, y: 0, z: 0}
+  m_LocalPosition: {x: 2.83, y: 0, z: 0}
   m_LocalScale: {x: 5.7517376, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7479459155073553518}
+  m_Father: {fileID: 1482916999697746442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3707449932364582710
 SpriteRenderer:
@@ -259,6 +259,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7479459155073553518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3392032379353512737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482916999697746442}
+  - component: {fileID: 2011371224723149361}
+  m_Layer: 0
+  m_Name: VisionAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1482916999697746442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392032379353512737}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4921533342630834813}
+  m_Father: {fileID: 7479459155073553518}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011371224723149361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392032379353512737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7eec6f195ce4ba4dab951d936527235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4093111019378618613
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +342,7 @@ Transform:
   - {fileID: 7145027319507284889}
   - {fileID: 3429254943111430074}
   - {fileID: 7021960730273620951}
-  - {fileID: 4921533342630834813}
+  - {fileID: 1482916999697746442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1701737301585106961
@@ -554,6 +599,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2540362d-f4a2-44ae-9b01-e352154c9850
     m_ActionName: 'Player/Menu[/Keyboard/m,/DualSenseGamepadHID/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2011371224723149361}
+        m_TargetAssemblyTypeName: HandlePlayerVision, Assembly-CSharp
+        m_MethodName: Rotate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 080caa33-6e95-47fe-8b8d-18c322cf164a
+    m_ActionName: 'Player/Rotate[/Mouse/position,/DualSenseGamepadHID/rightStick]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -578,6 +639,7 @@ MonoBehaviour:
     m_Bits: 64
   speed: 6
   jumpingPower: 10
+  playerVision: {fileID: 1501105640048395135}
 --- !u!114 &2297484988938343169
 MonoBehaviour:
   m_ObjectHideFlags: 0

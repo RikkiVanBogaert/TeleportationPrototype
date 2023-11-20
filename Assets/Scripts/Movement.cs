@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Abertay.Analytics;
 
 public class Movement : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
 
     private float horizontal;
-    [SerializeField] private float speed = 8f; 
+    [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
+
+    [SerializeField] private PlayerVision playerVision;
+    private Vector3 startPosition;
 
     private Platform currentPlatform;
 
@@ -27,7 +31,17 @@ public class Movement : MonoBehaviour
     {
         get => isFacingRight;
     }
-    
+
+    private int deaths;
+    public int Deaths
+    { get { return deaths; } }
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
+
     void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -46,8 +60,30 @@ public class Movement : MonoBehaviour
         //KillY
         if (transform.position.y < -8)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Respawn();
         }
+    }
+
+    public void Respawn()
+    {
+        Color c = Color.red;
+        c.a = 0.5f;
+
+        AnalyticsManager.LogHeatmapEvent("PlayerDied", transform.position, c);
+
+        transform.position = startPosition;
+        rb.velocity = Vector3.zero;
+        //reset vars
+        currentPlatform = null;
+        if (!isFacingRight)
+        {
+            Flip();
+        }
+
+        playerVision.CanTeleport = false;
+        playerVision.CurrentTeleport = null;
+
+        ++deaths;
     }
 
 

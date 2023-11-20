@@ -1,0 +1,8 @@
+PlayerTeleported:(0.11,3.151645,0):(1,0,0,1)
+PlayerTeleported:(-5.64,-1.048355,0):(1,0,0,1)
+PlayerTeleported:(1.58,-2.498355,0):(1,0,0,1)
+PlayerTeleported:(-4.260003,4.047722,0):(1,0,0,1)
+PlayerTeleported:(-2.289999,-1.387857,0):(1,0,0,1)
+PlayerTeleported:(-2.220005,-3.143353,0):(1,0,0,1)
+PlayerTeleported:(4.219998,-2.508565,0):(1,0,0,1)
+PlayerTeleported:(-1.380005,-2.181974,0):(1,0,0,0.5)

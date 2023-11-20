@@ -1,0 +1,22 @@
+[
+  {
+    "eventTimestamp": "20/11/2023 17:42:23",
+    "userID": "NULL",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "86f5c16908862f7c1af60146393764d7",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 1
+    }
+  },
+  {
+    "eventTimestamp": "20/11/2023 17:42:26",
+    "userID": "NULL",
+    "eventName": "PlayerTeleported",
+    "eventUUID": "da3d1b2c4fd4633ae049e1dc60e5efb9",
+    "GA_Value": 0.0,
+    "eventParams": {
+      "timesTeleported": 2
+    }
+  }
+]

@@ -9,6 +9,6 @@ public class EnemyVision : MonoBehaviour
     {
         if (other.tag != "PlayerBody") return;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        other.GetComponent<Movement>().Respawn();
     }
 }

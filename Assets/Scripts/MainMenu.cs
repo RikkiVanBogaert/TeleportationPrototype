@@ -7,34 +7,34 @@ public class MainMenu : MonoBehaviour
 {
     public void OpenLevel0()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Level0");
     }
 
     public void OpenLevel1()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
     }
     public void OpenLevel2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level2");
     }
 
     public void OpenLevel3()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Level3");
     }
 
     public void OpenLevel4()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Level4");
     }
     public void OpenLevel5()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Level5");
     }
 
     public void OpenLevel6()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("Level6");
     }
 }

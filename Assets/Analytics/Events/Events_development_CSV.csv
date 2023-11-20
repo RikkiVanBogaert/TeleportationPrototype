@@ -1,0 +1,17 @@
+Timestamp,UserID,Event Name,UUID,Param/timesTeleported,Param/deaths,Param/timePassed
+20/11/2023 17:49:37,Rikki,PlayerTeleported,1c4fb2700598c6cb72805beed16c2719,1,,
+20/11/2023 17:49:39,Rikki,PlayerTeleported,ca88b8c57ef24cbb8069ee12bf031bee,1,,
+20/11/2023 17:51:37,Rik,PlayerTeleported,80c2904c10d7d0f0919c6ec2f7fd8d16,1,,
+20/11/2023 17:51:46,Rik,PlayerTeleported,d4877fa38276ce946b76ac1b1a94dea7,1,,
+20/11/2023 17:51:48,Rik,PlayerTeleported,b3f9155bda5457be581df5bbb3d87652,2,,
+20/11/2023 17:51:51,Rik,PlayerTeleported,46b251f7c401448f0a6c4f64d8c8cd82,3,,
+20/11/2023 17:52:02,Rik,PlayerTeleported,2d930a7007c0069fd218377c915ab2ca,1,,
+20/11/2023 17:53:25,Ri,PlayerTeleported,e1884cb864853f9875dda3894e544e28,1,,
+20/11/2023 17:53:43,Ri,PlayerTeleported,2d3f45a13dca1b092a1764c885bb0d9b,1,,
+20/11/2023 17:53:50,Ri,PlayerTeleported,507b77395ec696feb4b3c339236db731,1,,
+20/11/2023 18:47:01,test,LevelFinished,a3cc1d3dcb2cc1e22636651ac6210b2d,1,0,3.55059981
+20/11/2023 18:47:04,test,LevelFinished,b51f9bcb2275b39810897b9e098241a6,1,0,2.41437054
+20/11/2023 18:47:12,test,LevelFinished,b4e54587a39d050719c4b7b9b1019234,2,0,7.767425
+20/11/2023 18:47:27,test,LevelFinished,c8a93ccd1b9c936b59405dce98643a35,3,0,15.1169119
+20/11/2023 18:47:51,test,LevelFinished,a8545033aa0afca413125fd45625c369,3,1,23.470335
+20/11/2023 18:48:08,test,LevelFinished,ac6531f7ad8067cc855837e77a57ed5b,0,2,17.37023

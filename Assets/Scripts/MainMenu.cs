@@ -37,4 +37,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Level6");
     }
+
+    public void OpenLevel7()
+    {
+        SceneManager.LoadScene("Level7");
+    }
 }

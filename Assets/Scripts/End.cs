@@ -20,8 +20,12 @@ public class End : MonoBehaviour
         //analytics;
         Dictionary<string, object> data = new Dictionary<string, object>();
         data.Add("timesTeleported", other.GetComponent<Teleportation>().TimesTeleported);
-        data.Add("deaths", other.GetComponent<Movement>().Deaths);
+        var movementPlayer = other.GetComponent<Movement>();
+        data.Add("deaths", movementPlayer.DeathsToFalling + movementPlayer.DeathsToEnemies);
+        data.Add("deathsToFalling", movementPlayer.DeathsToFalling);
+        data.Add("deathsToEnemies", movementPlayer.DeathsToEnemies);
         data.Add("timePassed", timePassed);
+        data.Add("sceneName", SceneManager.GetActiveScene().name);
         AnalyticsManager.SendCustomEvent("LevelFinished", data);
 
         //two less since main menu and analytics init scene dont count

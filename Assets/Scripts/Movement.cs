@@ -32,9 +32,13 @@ public class Movement : MonoBehaviour
         get => isFacingRight;
     }
 
-    private int deaths;
-    public int Deaths
-    { get { return deaths; } }
+    private int deathsToFalling;
+    public int DeathsToFalling
+    { get { return deathsToFalling; } }
+
+    private int deathsToEnemies;
+    public int DeathsToEnemies
+    { get { return deathsToEnemies; } }
 
     void Start()
     {
@@ -64,11 +68,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void Respawn()
+    public void Respawn(bool fellOfMap = false)
     {
         Color c = Color.red;
         c.a = 0.5f;
-
         AnalyticsManager.LogHeatmapEvent("PlayerDied", transform.position, c);
 
         transform.position = startPosition;
@@ -83,7 +86,8 @@ public class Movement : MonoBehaviour
         playerVision.CanTeleport = false;
         playerVision.CurrentTeleport = null;
 
-        ++deaths;
+        if (fellOfMap) ++deathsToFalling;
+        else ++deathsToEnemies;
     }
 
 
